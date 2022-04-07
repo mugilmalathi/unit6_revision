@@ -135,6 +135,7 @@
 
 17. What are service workers?
 
-     * Service workers is a javascript that works on the browser without the user interaction and it is working independently. It is a javascript file that runs seperately from the main browser.
+     * Service workers is a javascript that works on the browser without the user interaction and it is working independently. 
+     It is a javascript file that runs seperately from the main browser.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------

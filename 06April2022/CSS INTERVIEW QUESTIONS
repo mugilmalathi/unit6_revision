@@ -1,0 +1,141 @@
+1. how to add comments on css?
+
+    1. /* This is a single-line comment */
+    2. /* This is
+        a multi-line
+        comment */
+==============================================================================================================================================================================
+
+2. Why do we use pseudo-class?
+
+    * Whenever we use to click the element again or hover the element again then we need to function different from what we give in before.
+    * for example I give button{background-color:teal} if I am using pesudo-class button:hover{background-color:red}. Normally button appear
+    teal color whenever I hover the button it will change red color thats why we using pseudo-class.
+==============================================================================================================================================================================
+
+3.How is specificity applied?
+  
+   * There are two or more rules that applies in the same element then it automatically choose which is higher.!
+==============================================================================================================================================================================
+
+4. What method allows an element to be moved from its current position?
+
+    * If we are using position element then there are some methods are there to change that position.
+
+       1. static
+       2. relative
+       3. fixed
+       4. absolute
+       5. sticky
+==============================================================================================================================================================================
+
+5. what properties does flex model have?
+
+     * There are some flex properties are there for the purpose of the uses.
+       
+         1. flex-grow
+         2. flex-shrink
+         3. flex-basis
+         4. flex : auto
+         5. flex : initial
+         6. flex : none
+         7. flex : inherit
+==============================================================================================================================================================================
+
+6. What is the difference between flex and grids?
+7. Give an example where we have to use grids and where you have to use flexbox?
+8. Give an example where you cannot use flexbox, and you can only use grids?
+
+    * Flex is one dimension and grid is two dimension. 
+    * We can use either row or column using flex but grid automatically defined the rows and columns of the tags.
+    * whatever the properties are the in both we can use both on one page.
+==============================================================================================================================================================================
+
+9. What are combinators? give examples of how you can use them.
+
+    * combinators are used to combine or relationship between the selectors.
+    * We can use 
+        1. descendant Selector (space)
+        2. child selector (>)
+        3. adjacent sibiling selector (+)
+        4. general sibiling selector (~)
+==============================================================================================================================================================================
+
+10. What does object-fit do?
+
+       * Object-fit is a css property that helps to how to replace the element that such an image or video tag that should be  resized to fit it's container. 
+       * property for this is :- object-fit:cover;
+==============================================================================================================================================================================
+
+11. What does rotate do?
+
+      * rotate use to rotate the different types of shapes like cube, rectangle and so on.
+==============================================================================================================================================================================
+
+12. What rule can be used to define animations?
+
+      * Animation is one of the cascading style sheet property(CSS). 
+      * animation can be used to defined as @Keyframes property.
+      * We can give the name of the keyframe and we can callback that name to do some animation.
+==============================================================================================================================================================================
+
+13. When working with attribute selectors, how can you select elements which contain a particular attribute value?
+
+      * If we use attribute selector in css means we need to use the key value pair method like we need to give some key as what we need to do and give some values as what property used by that key.
+      * For Example,
+          width:20px; here, key is width and the value is 20px.
+==============================================================================================================================================================================
+
+14. What does @media do?
+
+     * @media means we have to use media query to give responsive wbpage. 
+     * If we need to build an webpage for small screen, medium screen and larger screen we can use media query to achieve this.
+     * Media query used to give the responsive webpage for different screens and different screen resolutions.
+==============================================================================================================================================================================
+
+15. What can be used to override properties of an element.
+
+        * We can use another css property for overriding is !important.
+==============================================================================================================================================================================
+
+16. How can you select every alternate elements in a list of elements using css?
+    
+       * We can you the child element to give alternate elements for li.
+       * For Example, 
+            ~li:nth-child(0)
+            ~li:nth-child(odd) or li:nth-child(even)
+==============================================================================================================================================================================
+
+17. What is the ranking of selectors with respect to specificity
+
+       * specificity has to give some points to the respective element.
+       * Here,
+           1. <p style = 'color:red'>  - 1000
+           2. p                        - 1
+           3. .test                    - 10
+           4. #test                    - 100
+           5. *                        - 0
+==============================================================================================================================================================================
+
+18. how can we apply same styles to multiple selectors?
+
+       * If we give same class name for multiple div then we can use that classname once to give some styling to change all the divs with respect with that classname.
+       * For example,
+          <div class='same'></div>
+          <div class='same'></div>
+          <div class='same'></div>
+          <div class='same'></div>
+          <div class='same'></div>
+
+          .same{
+              width:20%;
+              height:20%;
+              border: 1px solid red
+          }
+==============================================================================================================================================================================
+
+19. What are the differences between relative and absolute in CSS?
+
+        * position:relative is creating some spaces for the respective width and height.
+        * position:absolute is not creating any spaces it's overriding the element whichever element is there before.
+==============================================================================================================================================================================
