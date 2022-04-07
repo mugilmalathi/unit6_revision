@@ -1,0 +1,140 @@
+1.Explain briefly what happens when you hit a url? explain DNS lookup
+   
+   * When I hit the URl browser lookup the IP address of the domain and browser sends the http request to the server.
+   * Dns lookup is like a phone number from the phonebook. It lookup Dns record return from the dns server.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.What is a URLs full form? Explain what a url is and the four parts it consists of The protocol in use The hostname of the server The location of the file The arguments to the file.
+
+    * URL full form is Uniform Resource Locator.
+    * The four parts of the URl is:
+       1. A scheme.
+           -A Scheme is identifies the protocal that used to access the resources of the internet. like starts with HTTP and HTTPs
+       2. A host.
+           -A host is the location of the url that means like as www.google.com
+       3. A path.
+           - path is used to in which page we need to navigate like /index.html or /search/addtocart like this.
+       4. A query string.
+           - It is used to perform how many contents needs to display in one page like those stuffs like &page?=2
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. What is HTTP protocol?
+
+    * Hyper Text Transfer Protocol is used to communication between the client computer and the web server. It sends the HTTP request to the server and receives HTTP response from  the server.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. What is TCP protocol?
+
+    * Transmission Controll Protocol is to transport layer protocol that transmission of the packet from the source to destination.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Explain all the different HTTP methods?
+
+    * There are different types of HTTP methods are there. Here are some important methods,
+
+        1. GET
+        2. POST
+        3. PATCH
+        4. DELETE
+    
+    * GET method used to get all the datas from the server like local server or else the database server.
+    * POST method used to give the datas to the server.
+    * PATCH method used to update the datas which already in the server.
+    * DELETE methos used to erase all the datas or erase particular datas from the server.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. What are HTTP headers?
+
+    1. General Header
+    2. Client Request Header
+    3. Server Resoponse Header
+    4. Entity Header
+
+    * General header is applicable for both response and request messages.
+    * Client Request header is applicable for only request messages.
+    * Server Response header is applicable for only response messages.
+    * Entity header is defines meta informations about entity body or no body present in the request message.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. What are some HTTP response codes? what does it mean? 2xx, 3xx, 4xx, 5xx
+
+   1. 2xx :- The request was successful and the browser has received the expected information.
+   2. 3xx :- Further action needs to be taken by the user agent in order to fulfill the request.
+   3. 4xx :- An Error caused by the user
+   4. 5xx :- Client did everything correctly and server itself caused some problems.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+8. What is Cross Origin Resource Sharing? ( CORS ) Why do we need it?
+
+     * CORS is a mechanism that allows javascript on a webpage to make a request to another domain. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+9. What does Access-Control-Allow-Origin header do?
+
+      * Access control allow origin to tells to the browser that allows a single origin to access the resouses or else the wildcards "*" tells that allows any origin to access the resourse.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+10. What is clickjacking? How do you fix it?
+
+     * clickjacking is caused due to allow to access the third party website thats embed the caused sites using iframe. 
+     * If we don't allow the permission to change the settings to fix this issue.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+11. What are some performance metrics for your website?
+
+    * Webpage speed
+    * Time to title
+    * Time to start rendering
+    * Time to Interact
+    * DNS Lookup speed
+    * Requests per second
+    * Error Rate
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+12. Time to first byte, Page load time.
+
+    * Time to First byte is howmuch time will take the browser to receive the first response byte from the server when I hit the URl.
+
+    * Page load time is also considered as how much time will taken by the webpage to load the content of the webpage.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+13. What do CDN or Content Delivery Networks do? When do you need a CDN?
+
+    * CDN is allows to transfer assests needed for loading internet content like html pages, javascript pages, css pages, images, audio and video files. If we use CDN then the webpage response will happening smoothly and it will give the satisfying user experience.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+14. What is the difference between Client Side Renderring and Server Side Renderring?
+
+     * Client side Rendering refers to the front end and backend like if I am using html,css and js for for end mongodb, nodejs, expressjs for backend then it refers both side.
+     * Server side rendering refers to where the datas are storing and the source code of the data storing side.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+15. What is Progressive Renderring?
+
+     * Progressive renderring is the old html rendering technique that can be used to improve the performance of the websites. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+16. What is the difference between Preloading and Prefetching resources?
+
+     * Preload is an early fetch instructions to the browser to request a resources needed for a webpage and Prefetch server is slightly different usecase that the future navigation by the users. 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+17. What are service workers?
+
+     * Service workers is a javascript that works on the browser without the user interaction and it is working independently. It is a javascript file that runs seperately from the main browser.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
