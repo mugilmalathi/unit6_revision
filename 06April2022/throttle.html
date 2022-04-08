@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport"
+              content="width=device-width,
+                       initial-scale=1.0" />
+        <title>
+          JavaScript | Without Throttling
+        </title>
+    </head>
+    <body>
+        <input type="text" id="nothrottle">
+        <script>
+           
+            const btn = document.querySelector("#nothrottle");
+           
+            btn.addEventListener("input", () => {
+                console.log("count the letters");
+            });
+        </script>
+    </body>
+</html>

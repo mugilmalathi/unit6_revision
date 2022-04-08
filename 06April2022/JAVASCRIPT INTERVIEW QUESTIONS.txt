@@ -1,0 +1,227 @@
+1. What is hoisting?
+
+     * In javascript hoisting is a variable can be declared after it has been used.
+
+     * For Example,
+        
+        x = 5;
+
+        console.log(x);
+
+        var x;
+
+2. What is scoping?
+
+     * Scope is deetermines the accessibility of variables.
+     * There are three types of scope is there,
+
+         1. Block Scope
+         2. Function Scope
+         3. Global Scope
+
+     * Block Scope is declared the variables inside the scope function
+        
+        - {
+            let x = 10;
+          }
+
+     * Each function creates a new scope. Variables defines inside the function that not visible from outside of the function
+
+        - function test(){
+            var name = 'Mugil';
+          }
+
+     * Variable defines outside of the function is called global scope. we can use that variable from everywhere.
+
+        - var name = 'Mugil';
+          function test(){
+            var name = 'Mugil';
+          }
+
+3. How are var, let const different?
+
+     * var variables use to declare in globally and locally. var allows to reassign the variable. 
+
+     * let variable use to block function only like it is used to call by that function only.
+
+     * const is also uses as a let. we cannot reassign the const variable it shows the variable undefined. 
+
+4. What are the two main differences in arrow functions?
+
+     * arrow function do not have their own "this".
+
+     * Argument objects are not available in arrow function.
+
+     * call, apply, bind doesn't work as expected in arrow function.
+
+5. Does Call apply bind work for arrow functions?
+
+     * call, apply, bind doesn't work as expected in arro function.
+
+     - Normally function,
+
+        function(a){
+            return a + 10;
+        }
+
+     - Arrow function,
+       
+        1. (a)=>{
+            return a + 10;
+            }
+
+        2. (a) => a + 10;
+
+        3. a => a + 10
+
+6. What are closures?
+
+     * closure gives the access to an outer function's scope from an inner function. 
+     In javascript closures are created every time a function is created, at function creation time.
+
+     * For example,
+
+        function makeFunc() {
+           var name = 'Mugil';
+           function displayName() {
+              alert(name);
+           }
+        return displayName;
+        }
+
+        var myFunc = makeFunc();
+        myFunc();
+
+7. Write a program to debounce a search bar?
+
+     var button = document.getElementById("debounce");
+
+     button.addEventListener('click', setTimeout(function() {
+        alert("I'll show you the alert in every 3 seconds whenever you click the debounce button")
+                        }, 3000));
+
+8. Write a program to throttle a search bar?
+
+      <input id='nothrottle' type='text'/>
+
+      const btn = document.querySelector("#nothrottle");
+           
+            btn.addEventListener("input", () => {
+                console.log("count the letters");
+            });
+
+9. create a custom method for an array called myMap, use prototype chain to achieve this.
+
+      const fun = function(){
+          this.arr = [1, 2, 3];
+          this.newArr = [4, 5, 6];
+      }
+
+      const res = new fun();
+
+      fun.prototype.newArr[1] = 9;
+
+10. What is event bubbling?
+
+     * Event bubbling is a method that the event is an element inside another element and both elements have registered to a handle to that event.
+
+     * For example I have a 2 button and one button inside the parent h2 and another one inside the child h2 whenever I click the button parent element will act as a alert.
+
+
+11. What is event loop?
+
+     * Javascript is a single-threaded synchronous programming language. It allows one event 
+     will run at a time. It doesn't run multiple events at a time. But Event loop
+     helps to run the multiple events at same time. 
+       
+      * Event loop like as a friend of a javascript. It just help to run multiple
+      events in one time.
+
+      * For Example,
+
+          console.log('hello')
+          console.log('I am')
+          for(var i=0; i<1000000000; i++){
+             console.log('Mugil')
+          }
+          console.log('Hurraaayyyyy...!')
+
+12. Explain promises to a 5 year old, with simple examples.
+
+     * Promises means it look like a real life promise. For example Father
+     has promise to his son If you will get 1rst rank in the exam, I'll 
+     give you the gift for video game. If son will get 1rst rank then he'll 
+     get video game for sure. 
+
+     * For above example like promises act like If we defined we need to 
+     perform the program in a particular time then It'll act like that.
+
+
+13. Write a function called sleep that will return a promise, if you do not provide a number to the function, then it will return an error and goto the catch block
+
+     function getUserById(id) {
+        if (typeof id !== 'number' || id <= 0) {
+          throw new Error('Invalid id argument');
+         }
+
+       return new Promise((resolve, reject) => {
+        resolve({
+            id: id,
+            username: 'admin'
+        });
+    });
+}
+
+14. what does async await mean?
+
+     * We all know that Javascript is a Synchronous which means that it has
+      an event loop that allows you to queue up an action that won’t take place
+      until the loop is available sometime after the code that queued the action
+      has finished executing. 
+      
+      * But there’s a lot of functionalities in our program which makes 
+      our code Asynchronous. One of them is the Async/Await functionality.
+
+      * Await function is used to wait for the promise. It could be used with in
+      the async block only. It makes the code wait until the promise returns 
+      a result.
+
+15. What does the this keyword mean?
+
+     * this keyword refers to the current object in a method or constructor 
+     function.
+
+     * The most common use of the this keyword is to eliminate the confusion
+     between class attribute and parameters with the same name.
+
+16. What are classes? what are getters and setters?
+
+     * Getters and setters are used to protect our data, particularly
+      when creating classes. 
+      
+     * For each instance variable, a getter method
+      returns its value while a setter method sets or updates its value.
+
+17. How do you declare private and static variables in classes
+
+     * If a variable is declared as public static varName;, 
+     then I can access it from anywhere.
+
+     * Is declaring a variable as private static varName; 
+     then I can access it from that class only.
+
+18. What is currying?
+
+     * Currying is an advanced technique of working with functions. 
+     It’s used not only in JavaScript, but in other languages as well.
+
+     * Currying is a transformation of functions that translates a function
+      from callable as fun(a, b, c) into callable as fun(a)(b)(c).
+
+19. Write a program to flatten an array.
+
+     * let newArray = [].concat.apply([], arr);
+
+     * let newArray = arr.reduce((acc, val) => {
+     return acc.concat(val)
+     }, []);

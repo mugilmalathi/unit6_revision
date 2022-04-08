@@ -46,7 +46,7 @@
 7. Give an example where we have to use grids and where you have to use flexbox?
 8. Give an example where you cannot use flexbox, and you can only use grids?
 
-    * Flex is one dimension and grid is two dimension. 
+    * Flex is one dimension and grid is two dimension.
     * We can use either row or column using flex but grid automatically defined the rows and columns of the tags.
     * whatever the properties are the in both we can use both on one page.
 ==============================================================================================================================================================================
@@ -54,7 +54,7 @@
 9. What are combinators? give examples of how you can use them.
 
     * combinators are used to combine or relationship between the selectors.
-    * We can use 
+    * We can use
         1. descendant Selector (space)
         2. child selector (>)
         3. adjacent sibiling selector (+)

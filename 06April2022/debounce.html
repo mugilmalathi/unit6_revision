@@ -1,0 +1,14 @@
+<html> 
+<body>
+<button id="debounce">
+    Debounce
+</button>
+<script>
+var button = document.getElementById("debounce");
+
+button.addEventListener('click', setTimeout(function() {
+        alert("I'll show you the alert in every 3 seconds whenever you click the debounce button")
+                        }, 3000));
+</script>
+</body>
+</html>
