@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debouncing</title>
+</head>
+<body>
+    <h1 id="show"></h1>
+    <button id="debounce" onclick="debounce(clickme, 1000)">Click Me</button>
+</body>
+</html>
+
+<script>
+
+    // document.getElementById("debounce").addEventListener('click', debounce);
+
+    // function debounce(){
+
+    //     setTimeout(function(){
+
+    //         document.getElementById("show").innerText = "I will show every 5 seconds. No matter howmany time you click the button";
+
+    //     }, 5000)
+    // }
+
+    var id;
+
+    function clickme(){
+
+        document.getElementById("show").innerText = Math.floor(Math.random()*9);
+    }
+
+    function debounce(func, delay){
+
+        if(id){
+            clearTimeout();
+        }
+        id = setTimeout(function(){
+            func();
+        }, delay);
+    }
+
+
+
+</script>

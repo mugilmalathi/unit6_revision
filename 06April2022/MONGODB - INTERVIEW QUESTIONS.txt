@@ -1,0 +1,202 @@
+1. What are SQL Databases? What are some companies that use Mongo, what type of applications are these?
+
+     * SQL databases are like Structured Query Language databases. It is a collection of table that stores in a structured datas.
+
+     * Uber, Accenture, Delivery Hero, LaunchDarkly, these are all the companies that used mongo sql databases.
+
+
+2. What are NoSQL Databases? What are some companies that use Mongo, what type of applications are these?
+
+     * NoSQL databases are non tabular databases that stores the datas differently than the SQL like relational databases.
+     * there are some types are there based on the model of NoSQL databases like document, key-value and graph like these.
+
+     * eBay, MetLife, EA, Shutterfly,.. these companies are used this kind of database like using mongoDB by using NoSQL database.
+
+
+3. What is the difference between SQL and NoSQL databases?
+
+     * SQL is a relational database management system.
+     * This DB is fixed or static or predefined Schema.
+     * These Db's are not suited for hierarchial data storage.
+     * These Db's are best suited for complex queries.
+     
+
+     * NoSQL is a non relational or distributed database system.
+     * It has the dynamic Schema.
+     * These Db's are best suits for hierarical data storage.
+     * But this is not suit for complex queries.
+     
+
+4. What are some features of MongoDB?
+
+     * MongoDB is a scalable and flexible NoSQL docuent databases platform designed to overcome the relational databases approach and the limitations
+      of other NoSQL solutions.
+     * MongoDB Atlas is the leading global cloud database service for modern application like it use to AWS, Azure, Google Cloud and Heroku for deploy.
+     
+     
+5. What are aggregate queries?
+
+     * SQL aggregation function is used to perform the calculation on multiple rows of a single column of a table.
+     * It returns a single value.
+     * It is also used to summarize the data.
+     * There are some types are there like,
+
+          1. Count
+          2. sum
+          3. Average
+          4. Maximum
+          5. Minimum
+
+
+6. What are pipelines in aggregation?
+
+     * An aggregation pipeline consists of one or more stages that process documents:
+
+        - Each stage performs an operation on the input documents. 
+              - For example, a stage can filter documents, group documents, and calculate values.
+        - An aggregation pipeline can return results for groups of documents. 
+              - For example, return the total, average, maximum, and minimum values.
+
+            
+7. How do you do aggregate queries?
+
+     * Some common aggregate queries like, 
+
+         * Compute the average value from a numeric sequence.
+         * Count the number of elements in a sequence.
+         * Count the number of records in a column or table.
+         * Find the maximum values in a numeric sequence.
+         * Find the minimum values in a numeric sequence.
+         * Compute the sum of values in a numeric sequence.
+         * Compute the standard deviation of a numeric.
+
+
+8. How can you group by a particular value in MongoDB?
+
+     * To do any sort of grouping with mongoDB queries the we want to be able to use the aggregation function.
+     * The aggregation function framework is generally preffered as it uses native coded operators rather than the javascript translation. 
+     Therefore it is typically faster.
+
+
+9. How can you paginate on MongoDB?
+
+     * Using limit and skip method to paginate in mongoDB. 
+
+     1. limit method like,
+
+        db.collection_name.find().limit(number);
+
+     2. skip method like,
+
+        db.collection_name.skip(number);
+
+
+10. How can you sort in MongoDB?
+
+     * MongoDb also provide the sort inbuild function like the normal normal javascript function to sort the values.
+     * For Example,
+
+        - db.collection_name.find().sort({"title": -1})
+         
+
+
+11. What is indexing in MongoDB? Why do we need to use indexing? What are pros and cons for indexing?
+
+     * Indexing is sort our mongoDB collection in a particular order based on the value of one field(or more than one field). 
+     Assume that I have a collection called customers and I have kept customerName as the field for indexing, then what MongoDB 
+     does is that it’ll create a list of all the names in an alphabetical order in the document.
+
+     * The advantage of using indexing in mongoDB is, It sppeds up our find, update, and delete queries.
+
+
+12. Write the query for indexing a field in MongoDB?
+
+     * db.collection.createIndex( key and index type );
+     * db.collection.createIndex( { name : -1 } );
+
+
+13. What is the improvement in performance in MongoDB?
+
+     * There are some activity to do the performance of the MongoDb like,
+
+          - Every time we examine the query patterns and profiling.
+          - reviewing the data modeling and the indexing.
+          - try to embedding and take a referencing.
+          - We need to determine the memory use. It will be easily check in Atlas.
+
+
+14. What is the data structure used for indexing?
+
+     * B-trees are the data structure is most commenly used in indexing.
+     * And It can be time-effecient for lookups, deletion, and insertion.
+     * Indexes that use hash tables are generally referred to as hash index.
+
+
+15. Are values sorted in indexes?
+
+     * there is no values will be indexing but it show sort the function like look into the values by the key and displaying the
+      datas like depends upon the values.
+
+
+16. What are Replica Sets in MongoDB?
+
+     * A replica set in MongoDB is a group of mongod processes that maintain the same data set.
+     * Replica sets provide redundancy and high availability, and are the basis for all production deployments.
+     
+
+17. Explain the structure of ObjectID in MongoDB.
+
+     * The objectID contains the 12bytes.
+     * 4-bytes represents the timestamps.
+     * another 5-bytes represents the random value generated once per process.
+     the random value is unique to the process.
+     * another 3-byte represents the incrementung counter.
+
+
+18. By default, which index is created by MongoDB for every collection?
+
+     * All the collections are the default id like _id. It will be created automatically when we added the datas into the collection.
+
+
+19. In which format MongoDB represents document structure?
+
+     * like mongoDb represents the database like as a table. like I have to create 
+     student collection that the field is studentId, student name, class, gender, like these.
+
+
+20. What is the limitation of a document in MongoDB?
+
+     * The BSON Document size is 16MegaPixel. So the limitation for the mongoDb is like store the memory like 16MB.
+
+
+21. What is the difference between MongoDB and Redis database?
+
+     * MongoDB is written in c++, Go, javascript and python languages.
+     * The primary database model for mongodb is document store.
+     * MongoDB supports datatypes are strings, integer, double, decimal, boolean, object_id and so on..,
+     * It has predefined data types.
+
+
+     * Redis is written in ANSi and C languages.
+     * The Primary database model for redis is Key-value pair.
+     * redis supports the data types are Strings, Hashes, lists, sets a d sorted sets, bit arrays, and so on..,
+     * It has partially predefined data types. 
+
+
+22. How can you do one to many relation in MongoDB?
+
+     * One users have multiple posts like for example in facebook one user have to post
+     one or more multiple posts. posts depending by the user but user not depending on the post.
+
+
+23. How can you do many to many relation in MongoDB?
+
+     * for example in instagram many posts have many tags like one tag may be related to one or many posts and one tag related to one or many posts.
+     like posts and tags depends eachother.
+
+
+24. How can you do one to zillion relation in MongoDB?
+
+     * One to Zillion relationship is like as before said that like as the one to many relationship.
+     * For example, In twitter One user can tweet more than one tweets from one account. user cannot be depend by tweet. but
+     tweets are depends on the user.
